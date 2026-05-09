@@ -8,10 +8,13 @@ import Contact from "@/components/site/Contact";
 import Footer from "@/components/site/Footer";
 import FloatingWhatsApp from "@/components/site/FloatingWhatsApp";
 import StickyCallBar from "@/components/site/StickyCallBar";
+import useScrollReveal from "@/hooks/use-scroll-reveal";
 
 const Index = () => {
+  useScrollReveal();
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background animate-page-entrance">
       <Header />
       <main>
         <Hero />

@@ -23,7 +23,7 @@ const TESTIMONIALS = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="section-pad bg-secondary/40">
+    <section id="testimonials" className="section-pad bg-secondary/40 reveal">
       <div className="container-prose">
         <div className="text-center max-w-2xl mx-auto mb-12 space-y-4">
           <div className="text-sm font-semibold text-primary uppercase tracking-wider">
@@ -37,7 +37,7 @@ const Testimonials = () => {
           {TESTIMONIALS.map((t, i) => (
             <figure
               key={i}
-              className="lift bg-card border border-border rounded-xl p-6 md:p-7 shadow-[var(--shadow-card)] flex flex-col"
+              className="lift bg-card border border-border rounded-3xl p-6 md:p-7 shadow-[var(--shadow-card)] flex flex-col transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[var(--shadow-lg)]"
             >
               <Quote className="h-7 w-7 text-primary/30 mb-4" />
               <blockquote className="text-foreground/90 leading-relaxed flex-1">

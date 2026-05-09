@@ -51,7 +51,7 @@ const Header = () => {
             <a
               key={n.href}
               href={n.href}
-              className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+              className="px-3 py-2 text-sm font-medium text-foreground/80 transition-all duration-200 ease-out hover:text-primary hover:-translate-y-0.5"
             >
               {n.label}
             </a>
@@ -60,13 +60,13 @@ const Header = () => {
 
         <div className="hidden lg:flex items-center gap-2">
           <a href={phoneHref(COMPANY.primaryPhone)}>
-            <Button variant="outline" size="sm" className="gap-2">
+            <Button variant="outline" size="sm" className="gap-2 transition-all duration-200 ease-out hover:-translate-y-0.5 shadow-sm">
               <Phone className="h-4 w-4" />
               {COMPANY.primaryPhone}
             </Button>
           </a>
           <a href="#contact">
-            <Button size="sm" className="bg-primary hover:bg-[hsl(var(--primary-hover))]">
+            <Button size="sm" className="bg-primary hover:bg-[hsl(var(--primary-hover))] transition-all duration-200 ease-out hover:-translate-y-0.5">
               Get a Quote
             </Button>
           </a>

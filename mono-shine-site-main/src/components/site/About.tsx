@@ -11,7 +11,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="section-pad bg-background">
+    <section id="about" className="section-pad bg-background reveal">
       <div className="container-prose">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-5">
@@ -50,7 +50,7 @@ const About = () => {
             {stats.map((s) => (
               <div
                 key={s.label}
-                className="lift bg-card border border-border rounded-xl p-6 shadow-[var(--shadow-card)]"
+                className="lift group bg-card border border-border rounded-3xl p-6 shadow-[var(--shadow-card)] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-primary/30"
               >
                 <s.icon className="h-6 w-6 text-primary mb-3" />
                 <div className="font-display font-bold text-3xl md:text-4xl text-foreground">

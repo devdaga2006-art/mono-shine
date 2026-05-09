@@ -8,8 +8,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden"
-      style={{ background: "var(--gradient-hero)" }}
+      className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden reveal hero-bg"
     >
       {/* subtle red glow */}
       <div className="absolute -top-40 -right-40 h-[480px] w-[480px] rounded-full bg-primary/10 blur-3xl pointer-events-none" />
@@ -39,13 +38,13 @@ const Hero = () => {
               <a href="#contact">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto bg-primary hover:bg-[hsl(var(--primary-hover))] gap-2 shadow-[var(--shadow-lg)]"
+                  className="w-full sm:w-auto bg-primary hover:bg-[hsl(var(--primary-hover))] gap-2 shadow-[var(--shadow-lg)] transition-all duration-300 ease-out hover:-translate-y-0.5"
                 >
                   Request a Quote <ArrowRight className="h-4 w-4" />
                 </Button>
               </a>
               <a href={phoneHref(COMPANY.primaryPhone)}>
-                <Button size="lg" variant="outline" className="w-full sm:w-auto gap-2">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto gap-2 border border-border transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-primary/70 hover:bg-accent">
                   <Phone className="h-4 w-4" /> Call Now
                 </Button>
               </a>
@@ -69,7 +68,7 @@ const Hero = () => {
           </div>
 
           <div className="relative">
-            <div className="relative aspect-[5/4] rounded-2xl overflow-hidden border border-border shadow-[var(--shadow-lg)] bg-secondary">
+            <div className="relative aspect-[5/4] rounded-[2rem] overflow-hidden border border-border shadow-[var(--shadow-lg)] bg-secondary transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-[var(--shadow-lg)] group">
               <img
                 src={heroImg}
                 alt="High-quality plastic polymer pellets supplied by Mono Polymers"

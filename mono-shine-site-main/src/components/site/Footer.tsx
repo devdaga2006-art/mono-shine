@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-foreground text-background pt-14 pb-24 md:pb-10">
       <div className="container-prose">
-        <div className="grid md:grid-cols-4 gap-8 md:gap-10">
+        <div className="grid md:grid-cols-4 gap-8 md:gap-10 reveal">
           <div className="md:col-span-1 space-y-3">
             <div className="flex items-center gap-2.5">
               <div className="h-9 w-9 rounded-md bg-primary text-primary-foreground grid place-items-center font-display font-bold text-lg">
@@ -25,11 +25,11 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold mb-3 text-sm uppercase tracking-wider opacity-90">Quick Links</h4>
             <ul className="space-y-2 text-sm opacity-80">
-              <li><a href="#home" className="hover:text-primary-foreground hover:opacity-100">Home</a></li>
-              <li><a href="#about" className="hover:text-primary-foreground hover:opacity-100">About</a></li>
-              <li><a href="#services" className="hover:text-primary-foreground hover:opacity-100">Services</a></li>
-              <li><a href="#testimonials" className="hover:text-primary-foreground hover:opacity-100">Testimonials</a></li>
-              <li><a href="#contact" className="hover:text-primary-foreground hover:opacity-100">Contact</a></li>
+              <li><a href="#home" className="transition-colors duration-200 hover:text-primary-foreground hover:opacity-100">Home</a></li>
+              <li><a href="#about" className="transition-colors duration-200 hover:text-primary-foreground hover:opacity-100">About</a></li>
+              <li><a href="#services" className="transition-colors duration-200 hover:text-primary-foreground hover:opacity-100">Services</a></li>
+              <li><a href="#testimonials" className="transition-colors duration-200 hover:text-primary-foreground hover:opacity-100">Testimonials</a></li>
+              <li><a href="#contact" className="transition-colors duration-200 hover:text-primary-foreground hover:opacity-100">Contact</a></li>
             </ul>
           </div>
 

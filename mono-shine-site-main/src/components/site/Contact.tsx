@@ -69,7 +69,7 @@ ${parsed.data.message}`;
   const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(COMPANY.address)}&output=embed`;
 
   return (
-    <section id="contact" className="section-pad bg-background">
+    <section id="contact" className="section-pad bg-background reveal">
       <div className="container-prose">
         <div className="text-center max-w-2xl mx-auto mb-12 space-y-4">
           <div className="text-sm font-semibold text-primary uppercase tracking-wider">
@@ -86,7 +86,7 @@ ${parsed.data.message}`;
         <div className="grid lg:grid-cols-5 gap-6 lg:gap-8">
           <form
             onSubmit={onSubmit}
-            className="lg:col-span-3 bg-card border border-border rounded-xl p-6 md:p-8 shadow-[var(--shadow-card)] space-y-4"
+            className="lg:col-span-3 glass-card p-6 md:p-8 space-y-4"
             noValidate
           >
             <div className="grid sm:grid-cols-2 gap-4">
@@ -120,11 +120,11 @@ ${parsed.data.message}`;
               {errors.message && <p className="text-xs text-destructive">{errors.message}</p>}
             </div>
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
-              <Button type="submit" disabled={submitting} className="bg-primary hover:bg-[hsl(var(--primary-hover))] gap-2">
+              <Button type="submit" disabled={submitting} className="bg-primary hover:bg-[hsl(var(--primary-hover))] gap-2 transition-all duration-200 ease-out hover:-translate-y-0.5 shadow-sm">
                 <Send className="h-4 w-4" /> Send via WhatsApp
               </Button>
-              <a href={`mailto:${COMPANY.email}`} className="inline-flex">
-                <Button type="button" variant="outline" className="w-full gap-2">
+              <a href={`mailto:${COMPANY.email}`} className="inline-flex w-full sm:w-auto">
+                <Button type="button" variant="outline" className="w-full gap-2 transition-all duration-200 ease-out hover:-translate-y-0.5">
                   <Mail className="h-4 w-4" /> Email Us
                 </Button>
               </a>
@@ -133,7 +133,7 @@ ${parsed.data.message}`;
           </form>
 
           <aside className="lg:col-span-2 space-y-4">
-            <div className="bg-primary text-primary-foreground rounded-xl p-6 shadow-[var(--shadow-card)] space-y-4">
+            <div className="glass-card bg-primary text-primary-foreground p-6 space-y-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[var(--shadow-lg)]">
               <h3 className="font-display font-semibold text-lg">Direct Contacts</h3>
               {COMPANY.contacts.map((c) => (
                 <a
@@ -154,7 +154,7 @@ ${parsed.data.message}`;
                 href={waHref(COMPANY.whatsapp, "Hi Mono Polymers, I'd like a quote.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 pt-3 border-t border-primary-foreground/20"
+                className="flex items-center gap-3 pt-3 border-t border-primary-foreground/20 transition-all duration-200 ease-out hover:-translate-y-0.5"
               >
                 <div className="h-10 w-10 rounded-full bg-primary-foreground/15 grid place-items-center">
                   <MessageCircle className="h-4 w-4" />
@@ -166,7 +166,7 @@ ${parsed.data.message}`;
               </a>
             </div>
 
-            <div className="bg-card border border-border rounded-xl p-6 shadow-[var(--shadow-card)] space-y-4">
+            <div className="glass-card p-6 space-y-4">
               <div className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-primary mt-0.5" />
                 <div>
@@ -194,7 +194,7 @@ ${parsed.data.message}`;
               </div>
             </div>
 
-            <div className="rounded-xl overflow-hidden border border-border shadow-[var(--shadow-card)] aspect-video">
+            <div className="rounded-[1.75rem] overflow-hidden border border-border shadow-[var(--shadow-card)] aspect-video">
               <iframe
                 title="Mono Polymers location"
                 src={mapSrc}
